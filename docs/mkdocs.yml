@@ -9,7 +9,7 @@ theme:
 #  font:
 #    text: IBM Plex Mono
   icon:
-    repo: fontawesome/brands/gitlab #TODO change this gitlab with parameter
+    repo: fontawesome/brands/github #TODO change this gitlab with parameter
   name: material
   palette:
     # Palette toggle for light mode
