@@ -7,7 +7,7 @@ on:
 permissions:
   contents: write
 jobs:
-  lint  :
+  lint:
     runs-on: ubuntu-latest
     steps:
       #----------------------------------------------------------
@@ -53,6 +53,7 @@ jobs:
           black . --check
           isort .
   test:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       #----------------------------------------------------------
@@ -89,7 +90,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --only test
       #----------------------------------------------------------
-      #       deploy github page
+      #       test with pytest
       #----------------------------------------------------------
       - name: tests
         run: |
