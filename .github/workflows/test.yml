@@ -91,8 +91,8 @@ jobs:
       #----------------------------------------------------------
       #       deploy github page
       #----------------------------------------------------------
-      - name: Deploy github page
+      - name: tests
         run: |
           source .venv/bin/activate
-          pytest test/
+          pytest tests/
 
