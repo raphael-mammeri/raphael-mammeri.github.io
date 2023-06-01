@@ -45,8 +45,8 @@ addopts = '''
 testpaths = "tests"
 
 # flake8 options
-[tool.flake8]
-exclude = .venv
+[flake8]
+exclude = ".venv"
 
 # coverge reporting options
 [tool.coverge.report]
