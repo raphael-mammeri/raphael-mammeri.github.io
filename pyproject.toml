@@ -44,28 +44,6 @@ addopts = '''
 '''
 testpaths = "tests"
 
-# flake8 options
-[tool.flake8]
-exclude = '''
-/(
-    \.git
-    | \.hg
-    | notebooks
-    | \.mypy_cache
-    | \.tox
-    | \.nox
-    | \.venv
-    | _build
-    | \.eggs
-    | buck-out
-    | build
-    | dist
-    | env
-    | venv
-    | \.svn
-)/
-'''
-
 # coverge reporting options
 [tool.coverge.report]
 exclude_line = [
