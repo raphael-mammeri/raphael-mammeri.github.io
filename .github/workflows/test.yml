@@ -1,4 +1,4 @@
-name: docs
+name: test
 on:
   push:
     branches:
@@ -42,7 +42,7 @@ jobs:
       #----------------------------------------------------------
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install --no-interaction --only lint
+        run: poetry install --no-interaction --only lint --no-root
       #----------------------------------------------------------
       #       lint
       #----------------------------------------------------------
