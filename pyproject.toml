@@ -46,7 +46,7 @@ testpaths = "tests"
 
 # flake8 options
 [tool.flake8]
-exclude = ".venv"
+exclude = .venv
 
 # coverge reporting options
 [tool.coverge.report]
