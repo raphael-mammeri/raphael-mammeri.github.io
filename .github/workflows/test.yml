@@ -51,6 +51,6 @@ jobs:
           source .venv/bin/activate
           pwd
           ls .
-          flake8 .
+          flake8 . --exclude=.venv
           black . --check
           isort .
