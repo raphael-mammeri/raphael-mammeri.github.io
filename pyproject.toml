@@ -45,8 +45,26 @@ addopts = '''
 testpaths = "tests"
 
 # flake8 options
-[flake8]
-exclude = ".venv"
+[tool.flake8]
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | notebooks
+    | \.mypy_cache
+    | \.tox
+    | \.nox
+    | \.venv
+    | _build
+    | \.eggs
+    | buck-out
+    | build
+    | dist
+    | env
+    | venv
+    | \.svn
+)/
+'''
 
 # coverge reporting options
 [tool.coverge.report]
