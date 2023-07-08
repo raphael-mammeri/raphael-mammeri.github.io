@@ -4,6 +4,10 @@ repo_name: raph-mammeri.github.io
 site_author: Raphael Mammeri
 copyright: Copyright &copy; Raphael Mammeri 2023
 
+extra_css:
+  - stylesheets/extra.css
+
+
 theme:
   language: en
 #  font:
@@ -31,7 +35,7 @@ theme:
     - announce.dismiss
 
 nav:
-  - Home: index.md
+  - Home: probability/Integral.md # index.md
   - Articles:
       - articles/cookiecutter.md
   - Probability Theory:

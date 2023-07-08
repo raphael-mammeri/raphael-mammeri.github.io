@@ -1,7 +1,8 @@
 # We will study in this section the measurable functions
 ## here is definition
 
-!!!note "Measure Extension Theorem" tag="tag"
+
+!!!note "Measure Extension Theorem"
 
     Let $\mathcal{A}$ be semiring and let 
     $\mu: \mathcal{A} \to [0, \infty]$
@@ -12,7 +13,8 @@
     $\tilde{\mu}: \mathcal{A} \to [0, \infty]$ such that
     $\mu(A) = \tilde{\mu}(A)$ for all $A \in \mathcal{A}.$
 
-this [voila](#tag)
+
+<a href="#tag"><b>{counter}</b></a>
 
 Certainly! In probability theory, a semi-ring (also known as a semi-algebra) is a collection of sets that satisfies certain properties. Let's consider an example of a semi-ring.
 

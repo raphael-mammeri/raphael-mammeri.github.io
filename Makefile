@@ -15,25 +15,25 @@ clean: clean-build clean-pyc clean-test
 
 .PHONY: clean-build  ## 🧹 Remove build artifacts
 clean-build:
-	rm -fr build/
-	rm -fr dist/
-	rm -fr .eggs/
-	find . -name '*.egg-info' -exec rm -fr {} +
-	find . -name '*.egg' -exec rm -f {} +
+	@ rm -fr build/
+	@ rm -fr dist/
+	@ rm -fr .eggs/
+	@ find . -name '*.egg-info' -exec rm -fr {} +
+	@ find . -name '*.egg' -exec rm -f {} +
 
 .PHONY: clean-pyc  ## 🧹 Remove Python file artifacts
 clean-pyc:
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
-	find . -name '__pycache__' -exec rm -fr {} +
+	@ find . -name '*.pyc' -exec rm -f {} +
+	@ find . -name '*.pyo' -exec rm -f {} +
+	@ find . -name '*~' -exec rm -f {} +
+	@ find . -name '__pycache__' -exec rm -fr {} +
 
 .PHONY: clean-test  ## 🧹 Remove test and coverage artifacts
 clean-test:
-	rm -fr .tox/
-	rm -f .coverage
-	rm -fr htmlcov/
-	rm -fr .pytest_cache
+	@ rm -fr .tox/
+	@ rm -f .coverage
+	@ rm -fr htmlcov/
+	@ rm -fr .pytest_cache
 
 .PHONY: clean-reference-doc  ## 🧹 Remove reference documentation
 clean-reference-doc:
@@ -45,6 +45,6 @@ serve: clean-reference-doc
 
 .PHONY: push ## 🏹 Add and commit with message 'update' then pushes to remote
 push:
-	git add .
-	git commit -m'update'
-	git push
+	@ git add .
+	@ git commit -m'update'
+	@ git push
