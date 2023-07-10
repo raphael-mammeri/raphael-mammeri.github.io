@@ -3,7 +3,7 @@
 
 # How to Generate a Python Package in 5m
 
-<a href="../../probability/integral/#1.1"><b>Link to lemma</b></a>
+<a href="../../probability/Integral/#1.1"><b>Link to lemma</b></a>
 
 ## Intorduction
 Creating a new Python package involves setting up a project structure,
