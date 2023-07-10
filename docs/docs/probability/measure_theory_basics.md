@@ -5,7 +5,9 @@ description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
 !!!warning
     Page in progress. There may be typos and the content is subject to change.
 
-# Measure theory
+<a href="../integral/#1.1"><b>definition</b></a>
+
+# Measure Theory Basics
 ## Introduction
 Measure theory is a branch of mathematics that provides a rigorous framework for understanding and quantifying the concept of "size" or "measure" of sets. It deals with the study of measures, which are functions that assign a non-negative real number to subsets of a given set.
 
@@ -16,7 +18,7 @@ assigned to events will capture the likelihood or uncertainty of outcomes.
 These concepts establish a solid foundation for studying probabilistic 
 models and their properties.
 
- Let's see an illustration in the case of real number $\mathbb{R}.$
+Let's see an illustration in the case of real number $\mathbb{R}.$
 
 ### Lebesgue Measure on Real Numbers
 Consider an interval  $I = [a, b] \subset \mathbb{R}$  where $b>a.$ 

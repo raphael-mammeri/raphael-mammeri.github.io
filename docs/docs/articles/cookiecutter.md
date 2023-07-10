@@ -1,6 +1,10 @@
-# How to Generate a Python Package in 5m
 !!!warning
     Page in progress. There may be typos and the content is subject to change.
+
+# How to Generate a Python Package in 5m
+
+<a href="../../probability/integral/#1.1"><b>Link to lemma</b></a>
+
 ## Intorduction
 Creating a new Python package involves setting up a project structure,
 creating boilerplate code, and configuring various files. This process can 

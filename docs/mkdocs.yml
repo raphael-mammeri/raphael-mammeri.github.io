@@ -1,6 +1,6 @@
-site_name: Raphael Mammeri
-repo_url: https://github.com/raph-mammeri/raph-mammeri.github.io.git
-repo_name: raph-mammeri.github.io
+site_name: Personal Page
+repo_url: https://github.com/raphael-mammeri
+repo_name:  raphael-mammeri
 site_author: Raphael Mammeri
 copyright: Copyright &copy; Raphael Mammeri 2023
 
@@ -10,8 +10,9 @@ extra_css:
 
 theme:
   language: en
-#  font:
-#    text: IBM Plex Mono
+  font:
+    text: Quattrocento #Niramit #Quattrocento #Aleo #Mate #Arsenal #Sawarabi
+    #Mincho
   icon:
     repo: fontawesome/brands/github
   name: material
@@ -26,7 +27,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
+      primary: black #blue grey
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -35,12 +36,13 @@ theme:
     - announce.dismiss
 
 nav:
-  - Home: probability/Integral.md # index.md
+  - Home: index.md
   - Articles:
       - articles/cookiecutter.md
   - Probability Theory:
-    - measure theory: probability/measure theory.md
-    - funtions: probability/funtions.md
+    - Introduction: probability/1_Introduction.md
+    - Measure Theory Basics: probability/measure_theory_basics.md
+    - Integration: probability/Integral.md
   # - Code documentation: reference/
 
 plugins:
@@ -65,8 +67,8 @@ plugins:
       increment_across_pages: true
       exclude:
         - index.md
-        - articles/cookiecutter.md
-
+      restart_increment_after:
+        - probability/1_Introduction.md
 markdown_extensions:
 
   # Python Markdown

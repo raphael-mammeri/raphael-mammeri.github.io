@@ -1,5 +1,5 @@
 :root {
-  --md-admonition-icon--thm: url(./pique.svg)}
+  --md-admonition-icon--thm: url(./nail.svg)}
 .md-typeset .admonition.thm,
 .md-typeset details.thm {
   border-color: rgb(24, 0, 0);
@@ -12,7 +12,7 @@
 }
 .md-typeset .thm > .admonition-title::before,
 .md-typeset .thm > summary::before {
-  background-color: rgb(175,52,32);
+  background-color: rgb(126,38,66);
   -webkit-mask-image: var(--md-admonition-icon--thm);
           mask-image: var(--md-admonition-icon--thm);
 }
@@ -39,7 +39,7 @@
 
 
 :root {
-  --md-admonition-icon--lemma: url(./star.svg)}
+  --md-admonition-icon--lemma: url(./lemma.svg)}
 .md-typeset .admonition.lemma,
 .md-typeset details.lemma {
   border-color: rgba(243,186,34, 0.1);
@@ -47,12 +47,12 @@
 }
 .md-typeset .lemma > .admonition-title,
 .md-typeset .lemma > summary {
-  background-color: rgba(192, 192, 192, 0.1);
+  background-color: rgba(24, 29, 49, 0.05);
 
 }
 .md-typeset .lemma > .admonition-title::before,
 .md-typeset .lemma > summary::before {
-  background-color: rgb(250, 128, 114);
+  background-color: rgb(130,52,32);
   -webkit-mask-image: var(--md-admonition-icon--lemma);
           mask-image: var(--md-admonition-icon--lemma);
 }
