@@ -18,45 +18,7 @@ assigned to events will capture the likelihood or uncertainty of outcomes.
 These concepts establish a solid foundation for studying probabilistic 
 models and their properties.
 
-Let's see an illustration in the case of real number $\mathbb{R}.$
 
-### Lebesgue Measure on Real Numbers
-Consider an interval  $I = [a, b] \subset \mathbb{R}$  where $b>a.$ 
-The most 
-natural measure one would assign to the interval $I$ would be $b-a.$ 
-This would also have been the natural measure if 
-one or 
-its two sides of $I$ were open. Let's note this "measure" $\mu.$
-
-
-We also would want this definition to be extended to any set that can be 
-expressed as the disjoint
-union of intervals as follows : if $E \subset \mathbb{R}$ can be writen as 
-a disjoint union of intervals $I_i$ for $i$ in some index set $S,$ then we 
-would 
-define the measure of $E$ as the sum measures of the different 
-intervals $I_i$ :
-
-$$
-\mu(E) = \sum_{i \in S} \mu(I_i) = \sum_{i \in S} (b_i - a_i)
-$$
-where $a_i < b_i \in \mathbb{R}$ are the sides of the interval $I_i.$
-
-* Is this definition mathematically coherent, meaning does it lead to 
-  mathematical contradictions ?
-* Does it make sens if the index set $S$ is infinite ?
-* Can we extend this definition to any subset of $\mathbb{R}$ ?
-* If it can not be extended to all subsets of $\mathbb{R}$ is there a 
-  smaller collection of subsets of $\mathbb{R}$ to which we can extend the 
-  definition of $\mu$ ?
-
-These questions are addressed by defining the notions of $\sigma$-algebras, 
-measurable spaces and a proper 
-definition of a measure and with some tools like the measure 
-extension theorem.
-In this example the collection of sets on which we can extend the set 
-function $\mu$ is called the Borel $\sigma$-algebra and $\mu$ is called the 
-Lebesgue measure. We will develop their construction in the next subsections.
 
 ## Classes of sets
 !!! definiiton
@@ -68,6 +30,7 @@ Lebesgue measure. We will develop their construction in the next subsections.
     union of mutually disjoint sets in $\mathcal{A}$,
     * the class $\mathcal{A}$ is $\cap$-closed.
 
+algabras, sigma algebras, generated sigma algebras
 ## Measure Spaces
   Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$,
   $\mu: \mathcal{A} \to [0, \infty]$ a set function,
@@ -80,17 +43,19 @@ Lebesgue measure. We will develop their construction in the next subsections.
     * **$\sigma$-additive** if $\mu(\cup_{i \in I}A_i) = \sum_{i \in I}\mu(A_i)$ for $I$ countable and $(A_i)_{i \in I}$ mutually disjoint,
     * **subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ finite we have $\mu(A) \leq \sum_{i \in I}A_i$
     * **$\sigma$-subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ countable we have $\mu(A) \leq \sum_{i \in I}A_i$
-    
+
+* sigma finite
+* Measures
 ## Measure Extension Theorem
 
 !!! thm
-    Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ be a semiring and  $\mu: \mathcal{A} \to [0, \infty]$ additive, $\sigma$-subadditive and $\sigma$-finite such that $\mu(\emptyset)=0$.
+    Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ be a semiring and  $\mu: \mathcal{A} \to [0, \infty]$ additive, $\sigma$-subadditive, $\sigma$-finite and $\mu(\emptyset)=0$.
     There exists a unique $\sigma$-finite measure $\tilde{\mu }$ on $\sigma(\mathcal{A})$ such that for any $A \in \mathcal{A}$:
     $$
     \tilde{\mu }(A) = \mu(A)
     $$
 
-??? proof
+??? proof "Sketch of the proof"
     The proof of this theorem is beyond the scope of these lectures however we give a sketch here of the construction of the extended measure $\tilde{\mu }$.
     From $\mu$ a set function $\mu^*$ on $\mathcal{P}(\Omega)$ is defined as follows: for any $A \subseteq \Omega$:
 
@@ -100,3 +65,28 @@ Lebesgue measure. We will develop their construction in the next subsections.
 
     where $\mathcal{U}(A)$ is the set of countable coverings $(A_i)_{i \in I}$ of $A$ (i.e. $A \subseteq \cup_{i \in I}A_i$) with $A_i \in \mathcal{A}$ for all $i \in I$.
     The set function $\mu^*$ is an *outer measure* that defines a measure on the $\sigma$-algebra $\mathcal{M}(\mu^*)$ of $\mu^*$-measurable sets. Moreover for any $A \in \mathcal{A}$, $\mu(A) = \mu^*(A)$, $\mathcal{A} \subseteq \mathcal{M}(\mu^*)$ hence $\sigma(\mathcal{A}) \subseteq \mathcal{M}(\mu^*)$  and $\mu^*$ is the unique measure that extends $\mu$ to $\sigma(\mathcal{A})$.
+
+## Lebesgue-Borel Measure
+
+The Lebesgue-Borel measure is a key concept in measure theory, providing a measure for subsets of Euclidean spaces like $\mathbb{R}^n$. It plays a crucial role in analysis, integration theory, and probability theory. It is a measure defined on the Borel sigma-algebra $\mathcal{B}$ of subsets of $\mathbb{R}^n$. It extends the concept of length in one dimension, area in two dimensions, and volume in three dimensions to higher-dimensional spaces.
+
+### Borel Sigma-Algebra on Topological spaces
+
+### Lebesgue-Borel Measure on $\mathbb{R}^n$
+The Lebesgue-Borel measure $\lambda$ assigns a non-negative real number to each set in the Borel sigma-algebra $\mathcal{B}$ of $\mathbb{R}^n$. It is defined as follows:
+
+1. For an open interval $I \subset \mathbb{R}$, the measure of $I$ is given by its length: $\lambda(I) = \text{length}(I)$.
+2. For a rectangle $R \subset \mathbb{R}^n$, the measure of $R$ is the product of its side lengths: $\lambda(R) = \text{length}(R_1) \times \text{length}(R_2) \times \ldots \times \text{length}(R_n)$.
+3. The measure of any countable union of pairwise disjoint sets in $\mathcal{B}$ is the sum of their individual measures: $\lambda\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty \lambda(A_i)$.
+
+By extending this definition to more complex sets, such as open sets, closed sets, and bounded sets, we can determine their Lebesgue-Borel measures as well.
+
+### Properties of Lebesgue-Borel Measure
+The Lebesgue-Borel measure possesses several important properties:
+
+1. **Translation Invariance**: For any set $A \in \mathcal{B}$ and any vector $\mathbf{v} \in \mathbb{R}^n$, the measure of the translated set $A + \mathbf{v}$ is the same as the measure of $A$: $\lambda(A + \mathbf{v}) = \lambda(A)$.
+2. **Countable Subadditivity**: For any countable collection of sets $\{A_i\}_{i=1}^\infty$ in $\mathcal{B}$, the measure of their union is less than or equal to the sum of their individual measures: $\lambda\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty \lambda(A_i)$.
+3. **Approximation by Closed and Open Sets**: For any set $A \in \mathcal{B}$, there exist a closed set $F \subset A$ and an open set $G \supset A$ such that $\lambda(F) = \lambda(G)$.
+4. **Regularity**: The Lebesgue-Borel measure is regular, meaning that for any set $A \in \mathcal{B}$, we can approximate its measure from within and from outside by certain well-behaved sets.
+
+These properties make the Lebesgue-Borel measure a versatile and powerful tool for measuring sets in Euclidean space.
