@@ -58,6 +58,8 @@ In this example the collection of sets on which we can extend the set
 function $\mu$ is called the Borel $\sigma$-algebra and $\mu$ is called the 
 Lebesgue measure. We will develop their construction in the next subsections.
 
-
+## Classes of sets
+!!! definition
+A class $\mathcal{A} \subset \mathcal{P}(\Omega)$
 
 

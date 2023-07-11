@@ -1,7 +1,7 @@
 !!!warning
     Page in progress. There may be typos and the content is subject to change.
 
-# Welcome My Personal Page
+# Welcome to My Personal Page
 <p align="justify">
 Welcome to my blog, where I share articles and insights on data science,
 Python development, mathematics, and lectures on probability theory and machine 
