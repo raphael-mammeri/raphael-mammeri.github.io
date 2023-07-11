@@ -56,3 +56,41 @@
   -webkit-mask-image: var(--md-admonition-icon--lemma);
           mask-image: var(--md-admonition-icon--lemma);
 }
+
+:root {
+  --md-admonition-icon--example: url(./lemma.svg)}
+.md-typeset .admonition.example,
+.md-typeset details.example {
+  border-color: rgba(243,186,34, 0.1);
+    font-size: 16px;
+}
+.md-typeset .example > .admonition-title,
+.md-typeset .example > summary {
+  background-color: rgba(24, 29, 49, 0.05);
+
+}
+.md-typeset .example > .admonition-title::before,
+.md-typeset .example > summary::before {
+  background-color: rgb(130,52,32);
+  -webkit-mask-image: var(--md-admonition-icon--example);
+          mask-image: var(--md-admonition-icon--example);
+}
+
+:root {
+  --md-admonition-icon--proof: url(./lemma.svg)}
+.md-typeset .admonition.proof,
+.md-typeset details.proof {
+  border-color: rgba(243,186,34, 0.1);
+    font-size: 16px;
+}
+.md-typeset .proof > .admonition-title,
+.md-typeset .proof > summary {
+  background-color: rgba(24, 29, 49, 0.05);
+
+}
+.md-typeset .proof > .admonition-title::before,
+.md-typeset .proof > summary::before {
+  background-color: rgb(130,52,32);
+  -webkit-mask-image: var(--md-admonition-icon--proof);
+          mask-image: var(--md-admonition-icon--proof);
+}

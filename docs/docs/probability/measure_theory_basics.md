@@ -59,7 +59,44 @@ function $\mu$ is called the Borel $\sigma$-algebra and $\mu$ is called the
 Lebesgue measure. We will develop their construction in the next subsections.
 
 ## Classes of sets
-!!! definition
-A class $\mathcal{A} \subset \mathcal{P}(\Omega)$
+!!! definiiton
+    A class $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ is called  a **semiring**
+    if:
 
+    * $\emptyset \in \mathcal{A}$,
+    * for $A, B \in \mathcal{A}$ the difference $B \setminus A$ is a finite 
+    union of mutually disjoint sets in $\mathcal{A}$,
+    * the class $\mathcal{A}$ is $\cap$-closed.
 
+## Measure Spaces
+  Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$,
+  $\mu: \mathcal{A} \to [0, \infty]$ a set function,
+  $I$ an index set and $(A_i)_{i \in I}$ such that $A_i \in \mathcal{A}$ for any $i \in I$.
+!!! definiiton
+    We say that $\mu$ is :
+
+    * **monotone** if $\mu(A) \leq \mu(B)$ for any $A \subseteq B$  in $\mathcal{A}$,
+    * **additive** if $\mu(\cup_{i \in I}A_i) = \sum_{i \in I}\mu(A_i)$ for $I$ finite and $(A_i)_{i \in I}$ mutually disjoint,
+    * **$\sigma$-additive** if $\mu(\cup_{i \in I}A_i) = \sum_{i \in I}\mu(A_i)$ for $I$ countable and $(A_i)_{i \in I}$ mutually disjoint,
+    * **subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ finite we have $\mu(A) \leq \sum_{i \in I}A_i$
+    * **$\sigma$-subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ countable we have $\mu(A) \leq \sum_{i \in I}A_i$
+    
+## Measure Extension Theorem
+
+!!! thm
+    Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ be a semiring and  $\mu: \mathcal{A} \to [0, \infty]$ additive, $\sigma$-subadditive and $\sigma$-finite such that $\mu(\emptyset)=0$.
+    There exists a unique $\sigma$-finite measure $\tilde{\mu }$ on $\sigma(\mathcal{A})$ such that for any $A \in \mathcal{A}$:
+    $$
+    \tilde{\mu }(A) = \mu(A)
+    $$
+
+??? proof
+    The proof of this theorem is beyond the scope of these lectures however we give a sketch here of the construction of the extended measure $\tilde{\mu }$.
+    From $\mu$ a set function $\mu^*$ on $\mathcal{P}(\Omega)$ is defined as follows: for any $A \subseteq \Omega$:
+
+    $$
+    \mu^*(A):= \inf_{(A_i)_{i \in I} \in \mathcal{U}(A)} \sum_{i \in I} \mu(A_i)
+    $$
+
+    where $\mathcal{U}(A)$ is the set of countable coverings $(A_i)_{i \in I}$ of $A$ (i.e. $A \subseteq \cup_{i \in I}A_i$) with $A_i \in \mathcal{A}$ for all $i \in I$.
+    The set function $\mu^*$ is an *outer measure* that defines a measure on the $\sigma$-algebra $\mathcal{M}(\mu^*)$ of $\mu^*$-measurable sets. Moreover for any $A \in \mathcal{A}$, $\mu(A) = \mu^*(A)$, $\mathcal{A} \subseteq \mathcal{M}(\mu^*)$ hence $\sigma(\mathcal{A}) \subseteq \mathcal{M}(\mu^*)$  and $\mu^*$ is the unique measure that extends $\mu$ to $\sigma(\mathcal{A})$.
