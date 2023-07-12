@@ -31,7 +31,7 @@ In this subsection we will give the definitions and basic results of some classe
     * for any $A, B \in \mathcal{A}$ then $B \setminus A$ is a finite union of mutually disjoint sets in $\mathcal{A}$,
     * $\mathcal{A}$ is $\cap$-closed i.e. closed under finite intersections.
 
-    An **algebra** (resp. **$\sigma$-algebra**) if:
+    An **algebra** (resp. **$\sigma$-algebra**) if :
 
     * $\Omega \in \mathcal{A}$,
     * $\mathcal{A}$ is closed under complements,
@@ -102,26 +102,3 @@ and if $\mathcal{E'} \subseteq \mathcal{E}$ then $\sigma(\mathcal{E'}) \subseteq
     The set function $\mu^*$ is an *outer measure* that defines a measure on the $\sigma$-algebra $\mathcal{M}(\mu^*)$ of $\mu^*$-measurable sets. Moreover for any $A \in \mathcal{A}$, $\mu(A) = \mu^*(A)$, $\mathcal{A} \subseteq \mathcal{M}(\mu^*)$ hence $\sigma(\mathcal{A}) \subseteq \mathcal{M}(\mu^*)$  and $\mu^*$ is the unique measure that extends $\mu$ to $\sigma(\mathcal{A})$.
 
 ## Lebesgue-Borel Measure
-
-The Lebesgue-Borel measure is a key concept in measure theory, providing a measure for subsets of  $\mathbb{R}^n$. It plays a crucial role in analysis, integration theory, and probability theory. It is a measure defined on the Borel sigma-algebra $\mathcal{B}$ of subsets of $\mathbb{R}^n$. It extends the concept of length in one dimension, area in two dimensions, and volume in three dimensions to higher-dimensional spaces.
-
-### Borel Sigma-Algebra on Topological spaces
-
-### Lebesgue-Borel Measure on $\mathbb{R}^n$
-The Lebesgue-Borel measure $\lambda$ assigns a non-negative real number to each set in the Borel sigma-algebra $\mathcal{B}$ of $\mathbb{R}^n$. It is defined as follows:
-
-1. For an open interval $I \subset \mathbb{R}$, the measure of $I$ is given by its length: $\lambda(I) = \text{length}(I)$.
-2. For a rectangle $R \subset \mathbb{R}^n$, the measure of $R$ is the product of its side lengths: $\lambda(R) = \text{length}(R_1) \times \text{length}(R_2) \times \ldots \times \text{length}(R_n)$.
-3. The measure of any countable union of pairwise disjoint sets in $\mathcal{B}$ is the sum of their individual measures: $\lambda\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty \lambda(A_i)$.
-
-By extending this definition to more complex sets, such as open sets, closed sets, and bounded sets, we can determine their Lebesgue-Borel measures as well.
-
-### Properties of Lebesgue-Borel Measure
-The Lebesgue-Borel measure possesses several important properties:
-
-1. **Translation Invariance**: For any set $A \in \mathcal{B}$ and any vector $\mathbf{v} \in \mathbb{R}^n$, the measure of the translated set $A + \mathbf{v}$ is the same as the measure of $A$: $\lambda(A + \mathbf{v}) = \lambda(A)$.
-2. **Countable Subadditivity**: For any countable collection of sets $\{A_i\}_{i=1}^\infty$ in $\mathcal{B}$, the measure of their union is less than or equal to the sum of their individual measures: $\lambda\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty \lambda(A_i)$.
-3. **Approximation by Closed and Open Sets**: For any set $A \in \mathcal{B}$, there exist a closed set $F \subset A$ and an open set $G \supset A$ such that $\lambda(F) = \lambda(G)$.
-4. **Regularity**: The Lebesgue-Borel measure is regular, meaning that for any set $A \in \mathcal{B}$, we can approximate its measure from within and from outside by certain well-behaved sets.
-
-These properties make the Lebesgue-Borel measure a versatile and powerful tool for measuring sets in Euclidean space.

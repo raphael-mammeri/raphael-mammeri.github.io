@@ -44,6 +44,14 @@ nav:
     - Introduction: probability/1_Introduction.md
     - Measure Theory Basics: probability/measure_theory_basics.md
     - Integration: probability/Integral.md
+    - Convergence Theorems: probability/Integral.md
+    - Lp-Spaces: probability/Integral.md
+    - The Probabilistic Framework: probability/Integral.md
+    - Examples: probability/Integral.md
+    - Conditional Expectations: probability/Integral.md
+
+
+
   # - Code documentation: reference/
 
 plugins:
