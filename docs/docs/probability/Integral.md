@@ -6,7 +6,7 @@ In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
 Let $\mathbb{E}$ be the set of simple functions on $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
 
-!!! definiiton
+!!! definition
     We define the integral of a positive simple function
     $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
     by:
@@ -28,7 +28,7 @@ the representation of $f$:
 Starting from positive simple functions we now extend the definition of 
 the integral to measurable functions.
 
-!!! definiiton
+!!! definition
     Let $f: \Omega \to [0, \infty]$ be measurable. We define the 
     **integral** of
     $f$ by:
@@ -64,7 +64,7 @@ In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
 Let $\mathbb{E}$ be the set of simple functions on $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
 
-!!! definiiton
+!!! definition
     We define the integral of a positive simple function
     $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
     by:
