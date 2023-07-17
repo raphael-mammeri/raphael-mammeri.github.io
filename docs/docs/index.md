@@ -1,3 +1,15 @@
+---
+#template: home.html
+# status: new
+# icon: material/emoticon-happy
+# title: Material for MkDocs
+# description: Nullam urna elit, malesuada eget finibus ut, ac tortor. 
+hide:
+  - footer
+---
+
+
+
 !!!warning
     Page in progress. There may be typos and the content is subject to change.
 

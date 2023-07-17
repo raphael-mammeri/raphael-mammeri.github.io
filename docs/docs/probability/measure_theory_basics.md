@@ -1,11 +1,17 @@
 ---
+#template: home.html
+icon: material/alert-outline
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor. 
+hide:
+  - footer
 ---
+
 
 !!!warning
     Page in progress. There may be typos and the content is subject to change.
 
 <a href="../integral/#1.1"><b>definition</b></a>
+
 
 # Measure Theory Basics
 ## Introduction
@@ -22,7 +28,7 @@ models and their properties.
 
 ## Classes of sets
 In this subsection we will give the definitions and basic results of some classes of sets that will allow us to define measurable sets and state the measure extension theorem cf. <a href="#measure_extension_theorem"><b>theorem</b></a>.
-
+We will note $\Omega$ a non-empty set.
 
 !!! definition
     Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$. The class $\mathcal{A}$ is called  a **semiring** if :
@@ -52,7 +58,7 @@ The $\sigma$-algebras are the classes of sets that will be considered as ***even
     We leave the proof of the first part to the reader.
     The second part is a consequence of de Morgan's rule: $(\cup A_i)^c = \cap A_i^c$.
 
-It is easy to show that for any arbitrary non-empty index set $I$ and $(\mathcal{A}_i)_{i \in I}$ a familly of algebras (resp. $\sigma$-algeras) the intersection $\cap_I\mathcal{A}_i$ is also an algebra (resp. $\sigma$-algebra).
+It is easy to show that for any arbitrary non-empty index set $I$ and $(\mathcal{A}_i)_{i \in I}$ a family of algebras (resp. $\sigma$-algeras) the intersection $\cap_I\mathcal{A}_i$ is also an algebra (resp. $\sigma$-algebra).
 
 !!! definition
     Let $\mathcal{E} \subseteq \mathcal{P}(\Omega)$ and $I$ the set of $\sigma$-algebras of $\Omega$ containing $\mathcal{E}.$
@@ -65,6 +71,18 @@ It is easy to show that for any arbitrary non-empty index set $I$ and $(\mathcal
 Note that in the definition above the index set $I$ is never empty since it contains the $\sigma$-algebra $\mathcal{P}(\Omega).$
 It is also clear from the definiton above that if $\mathcal{E}$ is a $\sigma$-algebra then $\mathcal{E}=\sigma(\mathcal{E})$
 and if $\mathcal{E'} \subseteq \mathcal{E}$ then $\sigma(\mathcal{E'}) \subseteq \sigma(\mathcal{E})$.
+
+!!! definition
+    Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ and $A \subseteq \Omega$ non-empty.
+    The class
+    $$
+    \mathcal{A}\vert_A := \\{A \cap B \\ ; B \in \mathcal{A} \\}
+    $$
+    is called the trace of $\mathcal{A}$ on $A$ or the restriction of $\mathcal{A}$ to $A$.
+
+It can easily be shown that if $\mathcal{A}$ is an algebra (resp. $\sigma$-algebra) on $\Omega$ then
+$\mathcal{A}\vert_A$ is an algebra (resp. $\sigma$-algebra) on $A$ for any non-empty $A \subseteq \Omega$.
+
 ## Measure Spaces
   Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$,
   $\mu: \mathcal{A} \to [0, \infty]$ a set function,
@@ -75,11 +93,36 @@ and if $\mathcal{E'} \subseteq \mathcal{E}$ then $\sigma(\mathcal{E'}) \subseteq
     * **monotone** if $\mu(A) \leq \mu(B)$ for any $A \subseteq B$  in $\mathcal{A}$,
     * **additive** if $\mu(\cup_{i \in I}A_i) = \sum_{i \in I}\mu(A_i)$ for $I$ finite and $(A_i)_{i \in I}$ mutually disjoint,
     * **$\sigma$-additive** if $\mu(\cup_{i \in I}A_i) = \sum_{i \in I}\mu(A_i)$ for $I$ countable and $(A_i)_{i \in I}$ mutually disjoint,
-    * **subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ finite we have $\mu(A) \leq \sum_{i \in I}A_i$
-    * **$\sigma$-subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ countable we have $\mu(A) \leq \sum_{i \in I}A_i$
+    * **subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ finite we have $\mu(A) \leq \sum_{i \in I}\mu(A_i)$,
+    * **$\sigma$-subadditive** if for any $A\subseteq \cup_{i \in I}A_i$ and $I$ countable we have $\mu(A) \leq \sum_{i \in I}\mu(A_i)$,
+    * a **content** if $\mathcal{A}$ is a semiring, $\mu(\emptyset)=0$ and $\mu$ is additive.
 
-* sigma finite
-* Measures
+!!! definition
+    A set function $\mu : \mathcal{A} \to [0, \infty]$ is called a **measure** on $(\Omega, \mathcal{A})$ if $\mathcal{A}$ is a $\sigma$-algebra, $\mu(\emptyset)=0$ and $\mu$ is $\sigma$-additive.
+
+Let $\mu$ be a content on a semiring $\mathcal{A}$. 
+
+!!! definition
+    We say that $\mu$ is **finite** if $\mu(\Omega) < \infty$ and  **$\sigma$-finite** if there exists a family $(\Omega_n)_{n \in \mathbb{N}}$ in $\mathcal{A}$ such that $\Omega = \cup_{n \in \mathbb{N}}\Omega_n$ and $\mu(\Omega_n) < \infty$ for all $n \in \mathbb{N}$.
+
+Let $\Omega$ be a non-empty set and $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ and $\mu : \mathcal{A} \to [0, \infty]$ a set function.
+
+!!! definition
+    * We say that the pair $(\Omega, \mathcal{A})$ is a **measurable space** if $\mathcal{A}$ is a $\sigma$-algebra and $\mu$ a measure on $\mathcal{A}$.
+    * If $(\Omega, \mathcal{A})$ is a measurable space subsets of $\Omega$ in $\mathcal{A}$ are called **measurable sets**.
+    * A measurable space $(\Omega, \mathcal{A})$ is called **discrete** if $\Omega$ is at most countable and $\mathcal{A}=\mathcal{P}(\Omega)$.
+    * The set of finite (resp. $\sigma$-finite) measures on a measurable space $(\Omega, \mathcal{A})$ is denoted $\mathcal{M}_f(\Omega, \mathcal{A})$ (resp. $\mathcal{M}_{\sigma}(\Omega, \mathcal{A})$).
+
+Let $\mu$ be a content on a $\sigma$-algebra $\mathcal{A}$
+
+!!!lemma
+    The following three properties are equivalent 
+
+    * $\mu$ is a measure (it is a $\sigma$-additive)
+    * $\mu$ is $\sigma$-subadditive
+    * $\mu$ is lower semicontinuous
+
+
 ## Measure Extension Theorem
 
 <a id="measure_extension_theorem"></a>
@@ -100,5 +143,8 @@ and if $\mathcal{E'} \subseteq \mathcal{E}$ then $\sigma(\mathcal{E'}) \subseteq
 
     where $\mathcal{U}(A)$ is the set of countable coverings $(A_i)_{i \in I}$ of $A$ (i.e. $A \subseteq \cup_{i \in I}A_i$) with $A_i \in \mathcal{A}$ for all $i \in I$.
     The set function $\mu^*$ is an *outer measure* that defines a measure on the $\sigma$-algebra $\mathcal{M}(\mu^*)$ of $\mu^*$-measurable sets. Moreover for any $A \in \mathcal{A}$, $\mu(A) = \mu^*(A)$, $\mathcal{A} \subseteq \mathcal{M}(\mu^*)$ hence $\sigma(\mathcal{A}) \subseteq \mathcal{M}(\mu^*)$  and $\mu^*$ is the unique measure that extends $\mu$ to $\sigma(\mathcal{A})$.
-
 ## Lebesgue-Borel Measure
+* Borel sigma algebra of a topological space
+* The example of $\mathbb{R}^n$
+* List of generators of the Borel sigma algebra on $\mathbb{R}^n$
+* Make the remark that the classes of generator cited are countable and that this is a very crucial property
