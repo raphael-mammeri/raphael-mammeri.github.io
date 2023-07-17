@@ -11,7 +11,8 @@ packages = [
 python = "^3.8.1"
 minify = "^66.0.2"
 mkdocs-minify-plugin = "^0.6.4"
-mkdocs-material = "^9.1.18"
+mkdocs-material = "9.2.0b0"
+mkdocs-git-revision-date-localized-plugin = "^1.2.0"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs-material = "^9.1.15"

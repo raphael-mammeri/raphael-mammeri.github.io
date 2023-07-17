@@ -3,7 +3,7 @@ repo_url: https://github.com/raphael-mammeri/raphael-mammeri.github.io
 repo_name:  raphael-mammeri
 site_author: Raphael Mammeri
 copyright: Copyright &copy; Raphael Mammeri 2023
-
+edit_uri: edit/main/docs/
 extra_css:
   - stylesheets/extra.css
 
@@ -15,6 +15,8 @@ theme:
     #Mincho
   icon:
     repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
   name: material
   custom_dir: material/overrides
   palette:
@@ -44,6 +46,8 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - content.action.edit
+    - content.action.view
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -53,20 +57,24 @@ extra:
   generator: false
 nav:
   - Home: index.md
-  - Generic: generic.md
   - Articles:
       - articles/cookiecutter.md
-  - Probability Theory:
-    - probability/index.md
-    - Notations: probability/notations.md
-    - Introduction: probability/1_Introduction.md
-    - Measure Theory Basics: probability/measure_theory_basics.md
-    - Integration: probability/Integral.md
-    - Convergence Theorems: probability/Integral.md
-    - Lp-Spaces: probability/Integral.md
-    - The Probabilistic Framework: probability/Integral.md
-    - Examples: probability/examples.md
-    - Conditional Expectations: probability/Integral.md
+  - Theory:
+    - Probability Theory:
+      - probability/index.md
+      - Notations: probability/notations.md
+      - Introduction: probability/1_Introduction.md
+      - Measure Theory Basics: probability/measure_theory_basics.md
+      - Integration: probability/Integral.md
+      - Convergence Theorems: probability/Integral.md
+      - Lp-Spaces: probability/Integral.md
+      - The Probabilistic Framework: probability/Integral.md
+      - Examples: probability/examples.md
+      - Conditional Expectations: probability/Integral.md
+    - Machine Learning:
+        machine_learning/introduction.md
+  - Blog:
+    - blog/index.md
 
 
 
@@ -87,16 +95,19 @@ plugins:
           options:
             show_source: false
             docstring_style: numpy
-  - enumerate-headings:
-      toc_depth: 5
-      strict: true
-      increment_across_pages: true
-      exclude:
-        - index.md
-      restart_increment_after:
-        - probability/1_Introduction.md
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: long
+      post_url_date_format: yyyy-MM-dd
+      post_url_format: "{date}-{slug}"
+      categories_name: Categories
+      draft: true
+      draft_on_serve: true
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 
 
@@ -104,7 +115,7 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
-
+  - pymdownx.superfences
   # Python Markdown
   - abbr
   - admonition
