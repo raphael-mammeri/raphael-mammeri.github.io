@@ -16,7 +16,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   name: material
-  custom_dir: overrides
+  custom_dir: material/overrides
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -33,6 +33,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    - navigation.tabs
     - header.autohide
     - announce.dismiss
     - navigation.footer
