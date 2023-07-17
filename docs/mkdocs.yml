@@ -105,7 +105,9 @@ plugins:
       draft: true
       draft_on_serve: true
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
+      timezone: Europe/Amsterdam
+      enabled: !ENV [CI, true]
 
 
 
