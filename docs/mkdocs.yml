@@ -51,6 +51,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/raphael-mammeri
       name: raphael-mammeri
+  analytics:
+    provider: google
+    property: G-7PS0LETNMS
 
   generator: false
 nav:
