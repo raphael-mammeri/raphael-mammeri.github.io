@@ -4,6 +4,7 @@ repo_name:  raphael-mammeri
 site_author: Raphael Mammeri
 copyright: Copyright &copy; Raphael Mammeri 2023
 edit_uri: edit/main/docs/
+site_description: This is the site Description
 extra_css:
   - stylesheets/extra.css
 
@@ -18,7 +19,7 @@ theme:
     edit: material/pencil
     view: material/eye
   name: material
-  custom_dir: material/overrides
+  custom_dir: overrides
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -73,6 +74,7 @@ extra:
   generator: false
 nav:
   - Home: index.md
+  - About: about.md
   - Articles:
       - articles/cookiecutter.md
   - Theory:
@@ -124,6 +126,7 @@ plugins:
       draft_on_serve: true
   - git-revision-date-localized:
       enable_creation_date: false
+      fallback_to_build_date: true
       timezone: Europe/Amsterdam
       enabled: !ENV [CI, true]
 
