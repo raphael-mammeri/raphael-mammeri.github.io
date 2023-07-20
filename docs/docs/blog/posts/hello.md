@@ -23,7 +23,7 @@ facilitate the creation of a customized template for a Python package.
 This hands-on tutorial will guide you through the step-by-step process of
 setting up a Cookiecutter template.
 
-<a href="../../probability/Integral/#1.1"><b>Lemma 1.1 </b></a> (1), this 
+<a  class="annotate" href="../../probability/Integral/#1.1"><b>Lemma 1.1 </b></a> (1), this 
 could be
 { .annotate }
 

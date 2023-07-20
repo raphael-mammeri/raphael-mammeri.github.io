@@ -73,6 +73,7 @@ $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
     $$
 For this definition to be correct we need to make sure it does not depend on
 the representation of $f$:
+
 <a id="1.1"></a>
 !!! lemma
     If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
