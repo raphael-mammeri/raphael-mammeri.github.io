@@ -23,12 +23,18 @@ facilitate the creation of a customized template for a Python package.
 This hands-on tutorial will guide you through the step-by-step process of
 setting up a Cookiecutter template.
 
-Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.
+<a href="../../probability/integral/#1.1"><b>Lemma 1.1 </b></a> (1), this 
+could be
 { .annotate }
 
-1.  :man_raising_hand: $\mathcal{A}$ I'm an annotation! I can contain `code`, 
-    __formatted
-    text__, images, ... basically anything that can be expressed in Markdown.
+1.  If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
+    reperesentation of $f$ then: 
+    $$
+    \sum_{i=1}^{n} \alpha_i \mu(A_i) = \sum_{i=1}^{m} \beta_i \mu(B_i)
+    $$
+    Moreover the map $f \mapsto \int{f\\ d\mu}$ is positive linear and 
+    monotone increasing.
+
 
 ## Install Cookiecutter
 Cookiecutter is a python package so you need to have python installed in 

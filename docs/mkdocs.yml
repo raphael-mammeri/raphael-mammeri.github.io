@@ -8,7 +8,8 @@ site_description: This is the site Description
 extra_css:
   - stylesheets/extra.css
 
-
+hooks:
+    - hooks/hooks.py
 theme:
   language: en
   font:
@@ -125,8 +126,9 @@ plugins:
       draft: true
       draft_on_serve: true
   - git-revision-date-localized:
-      enable_creation_date: false
-      fallback_to_build_date: true
+      type: timeago
+      enable_creation_date: true
+      fallback_to_build_date: false
       timezone: Europe/Amsterdam
       enabled: !ENV [CI, true]
 
