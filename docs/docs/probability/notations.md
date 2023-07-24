@@ -6,3 +6,5 @@
 * liminf & limsup
 * indicator functions
 * up and down sets unions
+
+@ref(warning)

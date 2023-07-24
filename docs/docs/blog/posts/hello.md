@@ -9,6 +9,7 @@ readtime: 15
 ---
 # How to Generate a Python Package in 5m
 
+
 Creating a new Python package involves setting up a project structure,
 creating boilerplate code, and configuring various files. This process can
 be repetitive and time-consuming, especially when you want to follow best 

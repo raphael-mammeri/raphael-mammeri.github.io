@@ -6,7 +6,7 @@ In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
 Let $\mathbb{E}$ be the set of simple functions on $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
 
-!!! definition
+!!! definition  Integral of positive simple functions id=1
     We define the integral of a positive simple function
     $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
     by:
@@ -64,6 +64,7 @@ In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
 Let $\mathbb{E}$ be the set of simple functions on $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
 
+
 !!! definition
     We define the integral of a positive simple function
     $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
@@ -71,10 +72,26 @@ $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
     $$
     \int{f\\ d\mu} := \sum_{i=1}^{n} \alpha_i \mu(A_i)
     $$
+
+!!! definition  id=integral of positive functions
+    We define the integral of a positive simple function
+    $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
+    by:
+    $$
+    \int{f\\ d\mu} := \sum_{i=1}^{n} \alpha_i \mu(A_i)
+    $$
+
+!!! definition  Integral  id=integral of positive functions
+    We define the integral of a positive simple function
+    $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
+    by:
+    $$
+    \int{f\\ d\mu} := \sum_{i=1}^{n} \alpha_i \mu(A_i)
+    $$
+
 For this definition to be correct we need to make sure it does not depend on
 the representation of $f$:
 
-<a id="1.1"></a>
 !!! lemma
     If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
     reperesentation of $f$ then: 
@@ -96,7 +113,7 @@ the representation of $f$:
     If $f_i \uparrow f$ to some measurable function $f : \Omega \to [0, \infty]$
     then $\int{f_i} d\mu \uparrow \int{f d\mu}$
 
-!!! Lemma "Cauchy-Schwarz Inequatlity"
+!!! Lemma Cauchy-Schwarz Inequatlity
     Let $X$, $Y$ in $\mathcal{L}^2(\mathbf{P})$, then :
     $$
     \left(\mathbf{Cov}[X,Y] \right)^2 \leq \mathbf{Var}[X] \mathbf{Var}[Y]
@@ -106,4 +123,7 @@ Let $X$, $Y$ in $\mathcal{L}^2(\mathbf{P})$, then :
 $$
 \left(\mathbf{Cov}[X,Y] \right)^2 \leq \mathbf{Var}[X] \mathbf{Var}[Y]
 $$
-<a href="#1.1"><b>definition</b></a>
+<a href="#destination"><b>definition</b></a>
+
+\aref{the id here}
+<a href="#the id here"><b>definition</b></a>

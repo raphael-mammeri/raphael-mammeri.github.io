@@ -82,7 +82,7 @@ nav:
     - Probability Theory:
       - probability/index.md
       - Notations: probability/notations.md
-      - Introduction: probability/1_Introduction.md
+      #- Introduction: probability/1_Introduction.md
       - Measure Theory Basics: probability/measure_theory_basics.md
       - Integration: probability/Integral.md
       - Convergence Theorems: probability/Integral.md
@@ -91,7 +91,7 @@ nav:
       - Examples: probability/examples.md
       - Conditional Expectations: probability/Integral.md
     - Machine Learning:
-        machine_learning/introduction.md
+        machine_learning/Introduction.md
   - Blog:
     - blog/index.md
 
@@ -130,7 +130,7 @@ plugins:
       enable_creation_date: true
       fallback_to_build_date: false
       timezone: Europe/Amsterdam
-      enabled: !ENV [CI, true]
+      enabled: false #!ENV [CI, true]
 
 
 

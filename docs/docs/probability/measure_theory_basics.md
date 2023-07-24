@@ -10,7 +10,21 @@ hide:
 !!!warning
     Page in progress. There may be typos and the content is subject to change.
 
-<a href="../integral/#1.1"><b>definition</b></a>
+<a href="../Integral/#1"><b>definition</b></a>
+
+
+<a href='../1_Introduction/#this is the name of the thing'><b>this is the name of the thing</b></a>
+
+This is the first annotation (1)
+{ .annotate }
+
+1.  If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
+    reperesentation of $f$ then: 
+    $$
+    \sum_{i=1}^{n} \alpha_i \mu(A_i) = \sum_{i=1}^{m} \beta_i \mu(B_i)
+    $$
+    Moreover the map $f \mapsto \int{f\\ d\mu}$ is positive linear and 
+    monotone increasing.
 
 
 # Measure Theory Basics
@@ -24,7 +38,7 @@ assigned to events will capture the likelihood or uncertainty of outcomes.
 These concepts establish a solid foundation for studying probabilistic 
 models and their properties.
 
-
+@ref(Euler’s formula)
 
 ## Classes of sets
 In this subsection we will give the definitions and basic results of some classes of sets that will allow us to define measurable sets and state the measure extension theorem cf. <a href="#measure_extension_theorem"><b>theorem</b></a>.
