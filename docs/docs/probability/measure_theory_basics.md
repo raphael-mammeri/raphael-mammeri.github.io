@@ -59,7 +59,7 @@ We will note $\Omega$ a non-empty set.
 
 The $\sigma$-algebras are the classes of sets that will be considered as ***events*** in probability theory, and more generally the classes on which measures are defined.
 
-!!! lemma
+!!! lemma id=algebra definition
     The class $\mathcal{A}$ is an **algebra** if and only if:
 
     * $\Omega \in \mathcal{A}$,
