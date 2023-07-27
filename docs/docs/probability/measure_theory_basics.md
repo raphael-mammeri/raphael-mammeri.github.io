@@ -7,13 +7,9 @@ hide:
 ---
 
 
-!!!warning
+!!! warning
     Page in progress. There may be typos and the content is subject to change.
 
-<a href="../Integral/#1"><b>definition</b></a>
-
-
-<a href='../1_Introduction/#this is the name of the thing'><b>this is the name of the thing</b></a>
 
 This is the first annotation (1)
 { .annotate }
@@ -67,12 +63,23 @@ The $\sigma$-algebras are the classes of sets that will be considered as ***even
     * $\mathcal{A}$ is $\cup$-closed.
 
     If $\mathcal{A}$ is an algebra (resp. $\sigma$-algebra) then $\mathcal{A}$ is $\cap$-closed (resp. $\sigma$-$\cap$-closed).
-
+@tag(proof)
 !!! proof
     We leave the proof of the first part to the reader.
     The second part is a consequence of de Morgan's rule: $(\cup A_i)^c = \cap A_i^c$.
 
 It is easy to show that for any arbitrary non-empty index set $I$ and $(\mathcal{A}_i)_{i \in I}$ a family of algebras (resp. $\sigma$-algeras) the intersection $\cap_I\mathcal{A}_i$ is also an algebra (resp. $\sigma$-algebra).
+
+<span id="this"></span>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>We define the integral of a positive simple function
+<span class="arithmatex">\(f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}\)</span>
+by:
+$$
+\int{f\ d\mu} := \sum_{i=1}^{n} \alpha_i \mu(A_i)
+$$</p>
+</div>
 
 !!! definition
     Let $\mathcal{E} \subseteq \mathcal{P}(\Omega)$ and $I$ the set of $\sigma$-algebras of $\Omega$ containing $\mathcal{E}.$
@@ -129,7 +136,7 @@ Let $\Omega$ be a non-empty set and $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ 
 
 Let $\mu$ be a content on a $\sigma$-algebra $\mathcal{A}$
 
-!!!lemma
+!!! lemma
     The following three properties are equivalent 
 
     * $\mu$ is a measure (it is a $\sigma$-additive)

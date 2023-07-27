@@ -11,6 +11,10 @@ import os
 s = Settings()
 
 
+def remove_extra_space(line):
+	return " ".join(line.split())
+
+
 def refactor_adm(line: str) -> str:
 	"""
     Transform admonition first line
@@ -18,7 +22,8 @@ def refactor_adm(line: str) -> str:
     Expected syntax : !!! adm_name adm_title id=id_txt
     No extra quotes needed, id part must be last.
     """
-	if line.startswith(("??? ", "!!! ")):
+
+	if line.startswith(("???", "!!!")):
 		# Remove extra white spaces
 		line = " ".join(line.split())
 		# split id part
@@ -56,54 +61,36 @@ def load_files():
 	return get_files(config)
 
 
-def load_navigation():
-	"""Load Mkdocs navigation object
-
-	"""
-	config = load_config(s.path_cfg_file)
-	files = load_files()
-	nav_object = get_navigation(files, config)
-	for p in nav_object.pages:
-		p.read_source(config)
-	return nav_object
-
-
 def is_adm_line(line):
-	return line.startswith(("??? ", "!!! "))
+	return line.startswith(("??? ", "!!! ", "???+ ", "!!!+ "))
 
 
-def _update_ref_dict(page, ref_dict):
-	if page.markdown is not None:
-		for line in page.markdown.split('\n'):
-			if is_adm_line(line):
-				if " id=" in line:
-					line = " ".join(line.split())
-					identifier = line.split(" id=")[1]
-					ref_dict.update({identifier: page.url})
+def update_id_dict(id_dict, identifiers, url):
+	id_dict.update({})
 
 
-def get_ref_dict(url=None):
-	nav_object = load_navigation()
-	ref_dict = dict()
-	for page in nav_object.pages:
-		_update_ref_dict(page, ref_dict)
-	if url is not None:
-		return get_rel_dict(ref_dict, url)
-	else:
-		return ref_dict
+def update_ref_dict(markdown, url, ref_dict):
+	for line in markdown.split('\n'):
+		if is_adm_line(line):
+			if " id=" in line:
+				line = " ".join(line.split())
+				identifier = line.split(" id=")[1]
+				ref_dict.update({identifier: url})
 
 
-def get_rel_dict(ref_dict, url):
-	return {k: relpath(v, url) for k, v in ref_dict.items()}
-
-
-def update_references(text, url, ref_dict=None):
-	if ref_dict is None:
-		rel_dict = get_ref_dict(url)
-	else:
-		rel_dict = get_rel_dict(ref_dict, url)
-	rel_links = {key: f'{path}/#{key}' for key, path in rel_dict.items()}
+def update_content(page, ref_dict=None):
+	"""
+	Replace references to id with  href links
+	"""
+	rel_dict = {k: relpath(path, page.url) for k, path in ref_dict.items()}
+	rel_links = {k: f'{path}/#{k}' for k, path in rel_dict.items()}
 	replacements = {f'@ref({tag})': f'<a href="{link}"><b>link</b></a>' for tag, link in rel_links.items()}
+	if page.title == "functions":
+		print(page.content)
 	for k, v in replacements.items():
-		text = text.replace(k, v)
-	return text
+		page.content = page.content.replace(k, v)
+
+
+
+
+

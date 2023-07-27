@@ -82,6 +82,7 @@ nav:
     - Probability Theory:
       - probability/index.md
       - Notations: probability/notations.md
+      - functions: probability/funtions.md
       #- Introduction: probability/1_Introduction.md
       - Measure Theory Basics: probability/measure_theory_basics.md
       - Integration: probability/Integral.md

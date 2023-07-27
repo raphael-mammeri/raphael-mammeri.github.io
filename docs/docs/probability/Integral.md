@@ -1,5 +1,11 @@
-!!!warning
+!!! warning
     Page in progress. There may be typos and the content is subject to change.
+
+```
+Hello @tag(code)
+Hello -@tag(code)
+Hello --@tag(code)
+```
 
 # Basic Definitions and Results of the Integral
 In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
@@ -61,7 +67,7 @@ the integral to measurable functions.
 
 # The rest
 In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
-Let $\mathbb{E}$ be the set of simple functions on $\Omega$ and 
+Let $\mathbb{E}$ be the set of simple functions on @tag(omega) $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
 
 
@@ -73,7 +79,8 @@ $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
     \int{f\\ d\mu} := \sum_{i=1}^{n} \alpha_i \mu(A_i)
     $$
 
-!!! definition  id=integral of positive functions
+
+!!! definition
     We define the integral of a positive simple function
     $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
     by:
@@ -81,7 +88,8 @@ $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
     \int{f\\ d\mu} := \sum_{i=1}^{n} \alpha_i \mu(A_i)
     $$
 
-!!! definition  Integral  id=integral of positive functions
+@tag(integral of positive functions)
+!!! definition  Integral
     We define the integral of a positive simple function
     $f = \sum_{i=1}^n \alpha_i\mathbf{1}_{A_i}$
     by:
@@ -113,7 +121,7 @@ the representation of $f$:
     If $f_i \uparrow f$ to some measurable function $f : \Omega \to [0, \infty]$
     then $\int{f_i} d\mu \uparrow \int{f d\mu}$
 
-!!! Lemma Cauchy-Schwarz Inequatlity
+!!! Lemma Cauchy-Schwarz Inequatlity id=cauchy
     Let $X$, $Y$ in $\mathcal{L}^2(\mathbf{P})$, then :
     $$
     \left(\mathbf{Cov}[X,Y] \right)^2 \leq \mathbf{Var}[X] \mathbf{Var}[Y]
