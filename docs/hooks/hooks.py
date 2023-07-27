@@ -13,7 +13,7 @@ def on_page_markdown(markdown, page, config,  **kwargs):
     config.tags_paths.update({k: page.url for k in tag_ids})
     span = r'<span id="\1"></span>'
     markdown = re.sub(r'(?<!-)@tag\((.+?)\)', span, markdown)
-    return re.sub(r'-@tag\((.+?)\)', r'@tag(\1)', markdown)
+    return re.sub(r'-(@tag\(.+?\))', r'\1', markdown)
 
 
 def transform(tags_paths: dict, url: str, tag_id: str):

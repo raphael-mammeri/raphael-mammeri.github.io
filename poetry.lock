@@ -479,6 +479,16 @@ files = [
 ]
 
 [[package]]
+name = "latex2markdown"
+version = "0.2.1"
+description = "An AMS-LaTeX compatible converter that maps a subset of LaTeX to Markdown/MathJaX."
+optional = false
+python-versions = "*"
+files = [
+    {file = "latex2markdown-0.2.1.tar.gz", hash = "sha256:beac7a10cc559f723f7fa4cadf501e18ebc8f4c40ca94fde94fff1591961b81e"},
+]
+
+[[package]]
 name = "lxml"
 version = "4.9.3"
 description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
@@ -1553,4 +1563,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.1"
-content-hash = "6ea140c69400ef0512a40eda89dd46dbb404d9109808cb8692c7fb98af667f2b"
+content-hash = "7d94c00050357be710917ad3bd387d451866c3c16dec8c8a5307c7ffb358a3b7"

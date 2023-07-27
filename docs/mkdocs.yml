@@ -76,6 +76,8 @@ extra:
 nav:
   - Home: index.md
   - About: about.md
+  - LaTex:
+      - latex/latex.md
   - Articles:
       - articles/cookiecutter.md
   - Theory:
