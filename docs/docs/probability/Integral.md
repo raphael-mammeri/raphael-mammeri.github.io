@@ -1,11 +1,6 @@
 !!! warning
     Page in progress. There may be typos and the content is subject to change.
 
-```
-Hello @tag(code)
-Hello -@tag(code)
-Hello --@tag(code)
-```
 
 # Basic Definitions and Results of the Integral
 In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
