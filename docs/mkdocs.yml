@@ -77,22 +77,22 @@ nav:
   - Home: index.md
   - About: about.md
   - LaTex:
-      - latex/latex.md
+      - about.md
   - Articles:
       - articles/cookiecutter.md
   - Theory:
     - Probability Theory:
       - probability/index.md
-      - Notations: probability/notations.md
-      - functions: probability/funtions.md
+      - 1. Notations: probability/notations.md
+      - 2. functions: probability/funtions.md
       #- Introduction: probability/1_Introduction.md
-      - Measure Theory Basics: probability/measure_theory_basics.md
-      - Integration: probability/Integral.md
-      - Convergence Theorems: probability/Integral.md
-      - Lp-Spaces: probability/Integral.md
-      - The Probabilistic Framework: probability/Integral.md
-      - Examples: probability/examples.md
-      - Conditional Expectations: probability/Integral.md
+      - 3. Measure Theory Basics: probability/measure_theory_basics.md
+      - 4. Integration: probability/Integral.md
+      - 5. Convergence Theorems: probability/Integral.md
+      - 6. Lp-Spaces: probability/Integral.md
+      - 7. The Probabilistic Framework: probability/Integral.md
+      - 8. Examples: probability/examples.md
+      - 9. Conditional Expectations: probability/Integral.md
     - Machine Learning:
         machine_learning/Introduction.md
   - Blog:

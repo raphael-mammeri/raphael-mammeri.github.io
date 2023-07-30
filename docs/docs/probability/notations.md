@@ -7,6 +7,12 @@
 * indicator functions
 * up and down sets unions
 
-@ref(cauchy2)
+[link](label)
 
-Is there a tag here
+Some text here the rest of the line.
+Another text here
+and a third line here
+
+Some text here [](label) the rest of the line.
+Another text here
+and a third line here

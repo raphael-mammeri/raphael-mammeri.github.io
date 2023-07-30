@@ -14,6 +14,7 @@ object of $\mathcal{B}$ which is isomorphic to $x$ is also in $\mathcal{A}$.
 
 
 
+
 !!! note annotate "Phasellus posuere in sem ut cursus (1)"
 
     Lorem ipsum dolor sit amet, (2) consectetur adipiscing elit. Nulla et

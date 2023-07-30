@@ -1,20 +1,25 @@
 ---
 #template: home.html
-icon: material/alert-outline
+#icon: material/alert-outline
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor. 
 hide:
   - footer
 ---
 
+[This is the first annotation(1)](https://squidfunk.github.io/mkdocs-material/)
+{ .annotate }
 
+1.  Hello I'm an annotation
+2. 
 !!! warning
     Page in progress. There may be typos and the content is subject to change.
 
 
-This is the first annotation (1)
+[This is the first annotation(1)](https://squidfunk.github.io/mkdocs-material/)
 { .annotate }
 
-1.  If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
+1.  
+    If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
     reperesentation of $f$ then: 
     $$
     \sum_{i=1}^{n} \alpha_i \mu(A_i) = \sum_{i=1}^{m} \beta_i \mu(B_i)
@@ -55,7 +60,7 @@ We will note $\Omega$ a non-empty set.
 
 The $\sigma$-algebras are the classes of sets that will be considered as ***events*** in probability theory, and more generally the classes on which measures are defined.
 
-!!! lemma id=algebra definition
+??? lemma id=algebra definition
     The class $\mathcal{A}$ is an **algebra** if and only if:
 
     * $\Omega \in \mathcal{A}$,
@@ -81,7 +86,7 @@ $$
 $$</p>
 </div>
 
-!!! definition
+!!! definition @tag(label)
     Let $\mathcal{E} \subseteq \mathcal{P}(\Omega)$ and $I$ the set of $\sigma$-algebras of $\Omega$ containing $\mathcal{E}.$
     The $\sigma$-algebra
     $$
@@ -154,7 +159,7 @@ Let $\mu$ be a content on a $\sigma$-algebra $\mathcal{A}$
     \tilde{\mu }(A) = \mu(A)
     $$
 
-??? proof "Sketch of the proof"
+???+ proof "Sketch of the proof"
     The proof of this theorem is beyond the scope of these lectures however we give a sketch here of the construction of the extended measure $\tilde{\mu }$.
     From $\mu$ a set function $\mu^*$ on $\mathcal{P}(\Omega)$ is defined as follows: for any $A \subseteq \Omega$:
 
