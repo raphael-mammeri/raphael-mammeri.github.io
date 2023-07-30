@@ -86,7 +86,7 @@ $$
 $$</p>
 </div>
 
-!!! definition @tag(label)
+!!! definition "" @tag(label)
     Let $\mathcal{E} \subseteq \mathcal{P}(\Omega)$ and $I$ the set of $\sigma$-algebras of $\Omega$ containing $\mathcal{E}.$
     The $\sigma$-algebra
     $$
