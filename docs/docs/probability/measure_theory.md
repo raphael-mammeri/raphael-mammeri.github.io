@@ -6,29 +6,7 @@ hide:
   - footer
 ---
 
-[This is the first annotation(1)](https://squidfunk.github.io/mkdocs-material/)
-{ .annotate }
 
-1.  Hello I'm an annotation
-2. 
-!!! warning
-    Page in progress. There may be typos and the content is subject to change.
-
-
-[This is the first annotation(1)](https://squidfunk.github.io/mkdocs-material/)
-{ .annotate }
-
-1.  
-    If $f = \sum_{i=1}^{m} \beta_i \mathbf{1}_{A_i}$ is another 
-    reperesentation of $f$ then: 
-    $$
-    \sum_{i=1}^{n} \alpha_i \mu(A_i) = \sum_{i=1}^{m} \beta_i \mu(B_i)
-    $$
-    Moreover the map $f \mapsto \int{f\\ d\mu}$ is positive linear and 
-    monotone increasing.
-
-
-# Measure Theory Basics
 ## Introduction
 Measure theory is a branch of mathematics that provides a rigorous framework for understanding and quantifying the concept of "size" or "measure" of sets. It deals with the study of measures, which are functions that assign a non-negative real number to subsets of a given set.
 
@@ -39,10 +17,10 @@ assigned to events will capture the likelihood or uncertainty of outcomes.
 These concepts establish a solid foundation for studying probabilistic 
 models and their properties.
 
-@ref(Euler’s formula)
+
 
 ## Classes of sets
-In this subsection we will give the definitions and basic results of some classes of sets that will allow us to define measurable sets and state the measure extension theorem cf. <a href="#measure_extension_theorem"><b>theorem</b></a>.
+In this subsection we will give the definitions and basic results of some classes of sets that will allow us to define measurable sets and state the measure extension theorem cf. ?
 We will note $\Omega$ a non-empty set.
 
 !!! definition
@@ -58,9 +36,10 @@ We will note $\Omega$ a non-empty set.
     * $\mathcal{A}$ is closed under complements,
     * Closed under finite (resp. countable) unions, and we write $\mathcal{A}$ is $\cup$-closed (resp. $\sigma$-$\cup$-closed).
 
+@tag(sigma)
 The $\sigma$-algebras are the classes of sets that will be considered as ***events*** in probability theory, and more generally the classes on which measures are defined.
 
-??? lemma id=algebra definition
+??? lemma "this is a lemma" @tag(algebra definition)
     The class $\mathcal{A}$ is an **algebra** if and only if:
 
     * $\Omega \in \mathcal{A}$,
@@ -86,7 +65,7 @@ $$
 $$</p>
 </div>
 
-!!! definition "" @tag(label)
+!!! definition "" 
     Let $\mathcal{E} \subseteq \mathcal{P}(\Omega)$ and $I$ the set of $\sigma$-algebras of $\Omega$ containing $\mathcal{E}.$
     The $\sigma$-algebra
     $$
@@ -152,7 +131,7 @@ Let $\mu$ be a content on a $\sigma$-algebra $\mathcal{A}$
 ## Measure Extension Theorem
 
 <a id="measure_extension_theorem"></a>
-!!! thm
+!!! theorem
     Let $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ be a semiring and  $\mu: \mathcal{A} \to [0, \infty]$ additive, $\sigma$-subadditive, $\sigma$-finite and $\mu(\emptyset)=0$.
     There exists a unique $\sigma$-finite measure $\tilde{\mu }$ on $\sigma(\mathcal{A})$ such that for any $A \in \mathcal{A}$:
     $$

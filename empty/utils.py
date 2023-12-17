@@ -90,7 +90,13 @@ def update_content(page, ref_dict=None):
 	for k, v in replacements.items():
 		page.content = page.content.replace(k, v)
 
-
+def on_page_read_source(page, config):
+    try:
+        # Only navigation sources read on nav
+        source = config.sources[page.file.src_path]
+    except KeyError:
+        source = None
+    return source
 
 
 

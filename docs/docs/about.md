@@ -14,7 +14,6 @@ hide:
     Page in progress. There may be typos and the content is subject to change.
 
 # Welcome to My Personal Page
-<p align="justify">
 Welcome to my blog, where I share articles and insights on data science,
 Python development, mathematics, and lectures on probability theory and machine
 learning.
@@ -28,24 +27,21 @@ to provide valuable resources, tutorials, and discussions on various topics.
 From practical implementations of machine learning algorithms to explorations of
 complex mathematical theories, my goal is to simplify complex concepts and make
 them accessible to a wide audience.
-</p>
+
 ## About Me
-<p align="justify">
 With years of experience in both academia and industry, I have worked on
 numerous projects that have leveraged the power of mathematics and programming.
 My background in algebraic geometry has provided me with a strong foundation in
 abstract thinking, problem-solving, and logical reasoning. I believe that
 mathematics serves as a fundamental tool for understanding and solving
 real-world problems, and I'm excited to share this passion with you.
-</p>
+
 ## Topics Covered
-<p align="justify">
 In this blog, you can expect to find articles covering a wide range of topics,
 including data science techniques, Python development best practices,
 and explorations of various mathematical concepts. From practical data analysis
 and visualization to deep dives into mathematical theories, I strive to present
 content that is both informative and engaging.
-</p>
 
 Happy reading and coding!
 

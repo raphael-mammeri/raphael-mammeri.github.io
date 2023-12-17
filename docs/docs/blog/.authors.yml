@@ -1,4 +1,5 @@
-raphael-mammeri:
-  name: Raphael Mammeri
-  description: Creator
-  avatar: https://avatars.githubusercontent.com/u/24800018?v=4
+authors:
+  raphael-mammeri:
+    name: Raphael Mammeri
+    description: Creator
+    avatar: https://avatars.githubusercontent.com/u/24800018?v=4

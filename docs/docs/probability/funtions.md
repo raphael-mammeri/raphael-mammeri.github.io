@@ -35,5 +35,5 @@ Hello --@tag(code)
 [integral of positive functions](integral of positive functions)
 
 
-[algebra definition](algebra definition)
+
 

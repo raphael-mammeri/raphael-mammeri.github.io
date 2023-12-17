@@ -126,7 +126,3 @@ Let $X$, $Y$ in $\mathcal{L}^2(\mathbf{P})$, then :
 $$
 \left(\mathbf{Cov}[X,Y] \right)^2 \leq \mathbf{Var}[X] \mathbf{Var}[Y]
 $$
-<a href="#destination"><b>definition</b></a>
-
-\aref{the id here}
-<a href="#the id here"><b>definition</b></a>

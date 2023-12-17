@@ -1,19 +1,11 @@
 ---
 draft: false 
 date: 2023-07-17
-authors:
-  - raphael-mammeri
 categories:
   - Machine Learning
 readtime: 15
 ---
 # How to Generate a Python Package in 5m
-@ref(integral of positive functions)
-
-Hello
-
-
-@tag(algebra definition)
 
 Creating a new Python package involves setting up a project structure,
 creating boilerplate code, and configuring various files. This process can

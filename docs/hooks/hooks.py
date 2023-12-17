@@ -1,9 +1,8 @@
 from os.path import relpath
 from functools import partial
-from mkdocs.utils.meta import get_data
 import re
-
-
+from mkdocs.structure.nav import Navigation
+from functools import reduce
 def load_tagged_adm():
     return dict()
 
@@ -11,7 +10,7 @@ def load_tagged_adm():
 def on_config(config):
     config.tags_paths = dict()
     # Only \w are permitted in adm definition, thats ok but I think can be changed
-    config.adm_pattern = r'( *(!!!\+?|\?{3}\+?) *(\w+) *("(.+)")? *(@tag\((.+)\)){1}\n(\s{4}.+\n)+)'
+    config.adm_pattern = r'( *(!!!\+?|\?{3}\+?) *(\w+) *("(.*)")? *(@tag\((.+)\)){1}\n(\s{4}.+\n)+)'
     config.tagged_adms = dict()
     config.sources = dict()
 
@@ -49,9 +48,18 @@ def read_source(page):
         raise ValueError(f'Encoding error reading file: {page.file.src_path}')
     return source
 
+def number(item):
+    subitems = item.items if hasattr(item, "items") else item.children
+    if subitems is not None:
+        for k, subitem in enumerate(subitems):
+            if subitem.title is not None:
+                subitem.title = f"{k+1}. " + subitem.title
+            if subitem.children is not None:
+                number(subitem)
 
 def on_nav(nav, config, files):
-    print("This is on_nav")
+    for item in nav.items:
+        number(item)
     for page in nav.pages:
         source = read_source(page)
         source, tagged_adm = refactor_tagged_adm(source, config.adm_pattern)
@@ -61,7 +69,6 @@ def on_nav(nav, config, files):
 
 
 def on_page_read_source(page, config):
-    print("This is page read source")
     try:
         # Only navigation sources read on nav
         source = config.sources[page.file.src_path]
@@ -72,7 +79,6 @@ def on_page_read_source(page, config):
 
 def on_page_markdown(markdown, page, config,  **kwargs):
     # add check that adm label is in adm dictionary
-
 
     def on_match(m):
         label = m.group(3)
@@ -88,10 +94,10 @@ def on_page_markdown(markdown, page, config,  **kwargs):
 
     pattern = r"(.*(\[\]\((\w+)\)).*)"
     markdown = re.sub(pattern, on_match, markdown)
-    if page.title == "1. Notations":
-        print(markdown)
+
     tag_ids = re.findall(r'@tag\((.+?)\)', markdown)
     config.tags_paths.update({k: page.url for k in tag_ids})
+    
     span = r'<span id="\1"></span>'
     markdown = re.sub(r'(?<!-)@tag\((.+?)\)', span, markdown)
     return re.sub(r'-(@tag\(.+?\))', r'\1', markdown)
@@ -110,13 +116,17 @@ def transform(tags_paths: dict, url: str, tag_id: str):
         return tag_id
 
 
-def on_page_content(html, page, config, **kwargs):
+def on_page_content(html, page, config, **kwargs):  
     if page.title == "3. Measure Theory Basics":
-        #print(page.content)
-        pass
+        print(page.content)
     rel_tr = partial(transform, config.tags_paths, page.url)
 
     def on_match(m):
-        return f'<a href="{rel_tr(m.group(1))}">'
+        tag_id = m.group(1)
+        return f'<a href="{rel_tr(tag_id)}">'
 
     return re.sub('<a href="(.+?)">', on_match, html)
+
+if __name__ == "__main__":
+    from mkdocs.commands.serve import serve
+    serve("/Users/mrm/Documents/Workspace/projects/raphael-mammeri/docs/mkdocs.yml")

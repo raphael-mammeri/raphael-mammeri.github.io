@@ -1,5 +1,5 @@
 ---
-template: home.html
+# template: home.html
 # status: new
 # icon: material/emoticon-happy
 # title: Material for MkDocs

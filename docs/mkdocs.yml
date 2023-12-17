@@ -19,6 +19,7 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
+    logo: fontawesome/solid/circle-nodes
   name: material
   custom_dir: overrides
   palette:
@@ -41,13 +42,14 @@ theme:
     - header.autohide
     - announce.dismiss
     - navigation.footer
-    - navigation.indexes
+    #- navigation.indexes (messes the pages numbering)
     - toc.follow
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
+    - navigation.prune
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -74,27 +76,17 @@ extra:
 
   generator: false
 nav:
-  - Home: index.md
-  - About: about.md
-  - LaTex:
-      - about.md
-  - Articles:
-      - articles/cookiecutter.md
-  - Theory:
+  - Home: about.md
+  - Notes:
     - Probability Theory:
-      - probability/index.md
-      - 1. Notations: probability/notations.md
-      - 2. functions: probability/funtions.md
-      #- Introduction: probability/1_Introduction.md
-      - 3. Measure Theory Basics: probability/measure_theory_basics.md
-      - 4. Integration: probability/Integral.md
-      - 5. Convergence Theorems: probability/Integral.md
-      - 6. Lp-Spaces: probability/Integral.md
-      - 7. The Probabilistic Framework: probability/Integral.md
-      - 8. Examples: probability/examples.md
-      - 9. Conditional Expectations: probability/Integral.md
+      - Introduction: probability/introduction.md
+      - Measure Theory: probability/measure_theory.md
+      - Integration: probability/integration.md
+      - Examples: probability/examples.md
     - Machine Learning:
         machine_learning/Introduction.md
+  - Articles:
+      - articles/cookiecutter.md
   - Blog:
     - blog/index.md
 
@@ -189,3 +181,4 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/shortcuts.js
