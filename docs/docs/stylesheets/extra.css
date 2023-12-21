@@ -109,12 +109,12 @@
 }
 .md-typeset .example > .admonition-title,
 .md-typeset .example > summary {
-  background-color: rgba(24, 29, 49, 0.05);
+  background-color: rgba(193, 48, 48, 0.562);
 
 }
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before {
-  background-color: rgb(130,52,32);
+  background-color: rgb(193, 48, 48, 0.562);
   -webkit-mask-image: var(--md-admonition-icon--example);
           mask-image: var(--md-admonition-icon--example);
 }
@@ -147,7 +147,7 @@
 }
 .md-typeset .proof > .admonition-title::before,
 .md-typeset .proof > summary::before {
-  background-color: rgb(130,52,32);
+  background-color: rgb(193, 48, 48, 0.562);
   -webkit-mask-image: var(--md-admonition-icon--proof);
           mask-image: var(--md-admonition-icon--proof);
 }

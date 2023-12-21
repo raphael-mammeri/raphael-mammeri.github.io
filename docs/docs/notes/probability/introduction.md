@@ -27,8 +27,9 @@ in a general way. Starting from section : probabilistics we dive into the probab
 
 [something here](algebra definition)
 
-[zer](sigma)
-[zer](algebra definition)
+[sigma](sigma)
+
+[algebra](algebra definition)
 
 Some text here the rest of the line.
 Another text here

@@ -1,8 +1,11 @@
+
 !!! warning
     Page in progress. There may be typos and the content is subject to change.
 
+## Basic Definitions and Results of the Integral
 
-# Basic Definitions and Results of the Integral
+This is a reference to [Semi-Rings definition](semi-rings)
+
 In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
 Let $\mathbb{E}$ be the set of simple functions on $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
@@ -28,6 +31,8 @@ the representation of $f$:
 
 Starting from positive simple functions we now extend the definition of 
 the integral to measurable functions.
+
+
 
 !!! definition
     Let $f: \Omega \to [0, \infty]$ be measurable. We define the 
@@ -60,7 +65,7 @@ the integral to measurable functions.
     If $f_i \uparrow f$ to some measurable function $f : \Omega \to [0, \infty]$
     then $\int{f_i} d\mu \uparrow \int{f d\mu}$
 
-# The rest
+## The rest
 In this section $(\Omega, \mathcal{A}, \mu)$ will be a measure space.
 Let $\mathbb{E}$ be the set of simple functions on @tag(omega) $\Omega$ and 
 $\mathbb{E}^+$ the set of positive simple functions (values in $[0, \infty]$).
@@ -116,7 +121,7 @@ the representation of $f$:
     If $f_i \uparrow f$ to some measurable function $f : \Omega \to [0, \infty]$
     then $\int{f_i} d\mu \uparrow \int{f d\mu}$
 
-!!! Lemma Cauchy-Schwarz Inequatlity id=cauchy
+!!! Lemma "Cauchy-Schwarz Inequatlity" @tag(Cauchy)
     Let $X$, $Y$ in $\mathcal{L}^2(\mathbf{P})$, then :
     $$
     \left(\mathbf{Cov}[X,Y] \right)^2 \leq \mathbf{Var}[X] \mathbf{Var}[Y]

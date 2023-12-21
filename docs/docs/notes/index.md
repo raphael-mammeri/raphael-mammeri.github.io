@@ -1,0 +1,3 @@
+## Notes
+
+[Cauchy](semi-new)

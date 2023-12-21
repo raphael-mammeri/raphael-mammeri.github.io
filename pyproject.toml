@@ -10,6 +10,8 @@ packages = [
 [tool.poetry.dependencies] # main dependency group
 python = "^3.8.1"
 mkdocs-blog-plugin = "^0.25"
+mkdocs = "^1.5.3"
+pandoc = "^2.3"
 
 
 [tool.poetry.group.docs.dependencies]
@@ -26,6 +28,7 @@ latex2markdown = "^0.2.1"
 [tool.poetry.group.dev.dependencies]
 pydantic = "^1.10.8"
 python-dotenv = "^1.0.0"
+markdown = "^3.5.1"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.3.1"

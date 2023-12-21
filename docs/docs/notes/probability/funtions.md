@@ -25,13 +25,6 @@ object of $\mathcal{B}$ which is isomorphic to $x$ is also in $\mathcal{A}$.
 2.  :woman_raising_hand: I'm an annotation as well!
 
 
-
-```
-Hello @tag(code)
-Hello -@tag(code)
-Hello --@tag(code)
-```
-
 [integral of positive functions](integral of positive functions)
 
 
