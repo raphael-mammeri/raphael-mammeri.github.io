@@ -8,6 +8,7 @@ def load_tagged_adm():
     return dict()
 
 
+
 def on_config(config):
     config.tags_paths = dict()
     # Only \w are permitted in adm definition, thats ok but I think can be changed
@@ -55,8 +56,8 @@ def enumerate_children(element):
             enumerate_children(e)
 
 def on_nav(nav, config, files):
-    for item in nav.items:
-        enumerate_children(item)
+    #for item in nav.items:
+    #    enumerate_children(item)
     for page in nav.pages:
         source = read_source(page)
         tag_ids = re.findall(r'@tag\((.+?)\)', source)
