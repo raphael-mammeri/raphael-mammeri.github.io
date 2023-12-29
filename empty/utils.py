@@ -36,3 +36,4 @@ def refactor_admonitions(markdown, cnumber: str = None):
     #rel_tr = partial(transform, config.tags_paths, page.url)
 
     return re.sub(pattern, on_match, markdown)
+

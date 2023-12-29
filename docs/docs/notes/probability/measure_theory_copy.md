@@ -4,6 +4,8 @@
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor. 
 hide:
   - footer
+
+# use here to add options to pages in numbering and style
 ---
 
 
@@ -50,7 +52,7 @@ Back to the extension of the set function $\mu$, the questions we could have are
  The precise answers to these questions will be given in subsections [Measure Extension Theorem](Measure Extension Theorem) and [Lebesgue-Borel Measure](lebesgue-Borel).
 
 
-## Classes of sets
+# Classes of sets
 
 The most important class of sets is the class of $\sigma$-algebras. It is the class on which measures and probability measures are defined. However, as we will see, measures on $\sigma$-algebras are usually defined on a smaller class then extended to the generated $\sigma$-algebra.
 One of these smaller classes is the class of semi-rings.

@@ -7,6 +7,10 @@
 # description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
 hide:
   - footer
+enumerate-and-reference:
+  number_headings:
+    activated: false
+    lowest_level: 2
 ---
 
 
