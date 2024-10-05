@@ -1,5 +1,5 @@
 ---
-#template: home.html
+# template: home.html
 #template: base.html
 # status: new
 # icon: material/emoticon-happy

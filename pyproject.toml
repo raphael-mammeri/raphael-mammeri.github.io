@@ -8,11 +8,13 @@ packages = [
     { include = "empty" }
     ]
 [tool.poetry.dependencies] # main dependency group
-python = "^3.8.1"
+python = "^3.9"
 mkdocs-blog-plugin = "^0.25"
 mkdocs = "^1.5.3"
 pandoc = "^2.3"
 marko = "^2.0.2"
+mkdocs-enumerate-and-reference = "^0.1.1"
+mkdocs-material = {extras = ["imaging"], version = "^9.5.39"}
 
 
 [tool.poetry.group.docs.dependencies]
@@ -147,6 +149,4 @@ strict_optional = true
 warn_no_return = true
 warn_redundant_casts = true
 warn_return_any = true
-warn_unreachable = true
-warn_unused_configs = true
-warn_unused_ignores = true
+warn_unreachabl

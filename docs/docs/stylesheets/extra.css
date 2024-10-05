@@ -151,3 +151,24 @@
   -webkit-mask-image: var(--md-admonition-icon--proof);
           mask-image: var(--md-admonition-icon--proof);
 }
+
+
+
+:root {
+  --md-admonition-icon--project: url(./project.svg)}
+.md-typeset .admonition.project,
+.md-typeset details.project {
+  border-color: rgba(20, 176, 93, 0.176);
+    font-size: 17px;
+}
+.md-typeset .project > .admonition-title,
+.md-typeset .project > summary {
+  background-color: rgba(20, 176, 93, 0.104);
+
+}
+.md-typeset .project > .admonition-title::before,
+.md-typeset .project > summary::before {
+  background-color:  rgb(20, 176, 93);
+  -webkit-mask-image: var(--md-admonition-icon--project);
+          mask-image: var(--md-admonition-icon--project);
+}
